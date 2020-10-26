@@ -435,10 +435,11 @@
               $('#showtable').click(showMultiplication);
               function showMultiplication(){
               var result= "<table>";
-              for (var i=1; i<=10; i++)
+              var N= parseINT (document.getElementById('inputnumber2').value);
+              for (var i=1; i<=N+1; i++)
               {
                 result +="<tr>";
-                for (var j=1; j<=10; j++)
+                for (var j=1; j<=1; j++)
                 {
                     var product= i*j;
                     result += "<td>"+i+"x"+j+"="+product+"</td>";
@@ -469,6 +470,11 @@
 			<p> A simple JavaScript Quiz </p>
 			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
 			<script>
+        var numberofmonth= 360;
+        var loanamount= 150000;
+        var interestrate= 0.055;
+        var monthlyrate= interestrate/12;
+        var monthlypayment= loanamount * monthlyrate/ (1-Math.pow(1+monthlyrate,-numberofmonth));
 
 
 			</script>
@@ -502,6 +508,14 @@
 						</tr>
 					</table>
 					<script>
+            var randoming= Math.floor(Math.random()*6) +1;
+            console.log(randoming);
+            var imgE= document.getElementById('dies');
+            imgE.setAttribute('src', "img/die3.png");
+
+            var stat= [0,0,0,0,0,0];
+            stat[randoming -1]++;
+            console.log(stat); 
 
 					</script>
 
